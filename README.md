@@ -1,3 +1,3 @@
 # Personal-Website
 
-My Personal site
+My portfolio website
