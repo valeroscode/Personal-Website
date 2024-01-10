@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+
+    <title>Alex Valero - Software Developer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: white;
+            color: #ecf0f1;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0096FF;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0096FF;
+}
+
+        header {
+        margin: 1rem;
+        margin-right: 2rem;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ecf0f1;
+            color: black;
+        }
+
+        .nav-container {
+            display: none;
+            position: fixed;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: whitesmoke;
+            position: fixed;
+            width: 100%;
+            border-radius: 100px;
+        }
+
+        .nav-container h1 {
+            position: absolute;
+            left: 9vw;
+        }
+
+        nav {
+            text-align: right;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            background-color: whitesmoke;
+            -webkit-transition:all 0.3s ease;
+            -moz-transition:all 0.3s ease;
+            -o-transition:all 0.3s ease;
+            transition:all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #0096FF;
+        }
+
+        nav a:nth-child(1) {
+            color: #0096FF;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 4rem;
+        }
+
+        .about-me {
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            padding: 40px 0;
+            position: relative;
+            top: 6rem;
+            margin: 0 5rem;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+        }
+
+        .about-me img {
+            position: absolute;
+            width: 22rem;
+            display: none;
+            height: 23rem;
+            border-radius: 7px;
+        }
+
+        .about-me p {
+            color: #0096FF;
+            margin-left: 4rem;
+            margin-bottom: 20rem;
+        }
+
+        @keyframes slideLeft {
+            0% {
+            right: -50px;
+            }
+            100% {
+                right: 0px;
+            }
+        }
+
+        @keyframes slideRight {
+            0% {
+            left: -10rem;
+            }
+            100% {
+            left: -7rem;
+            }
+        }
+
+        .func {
+            font-family: 'Zeyada', cursive;
+            width: 32%;
+            right: -50px;
+            opacity: 0.6;
+            font-size: 1rem;
+            position: absolute;
+            top: 20rem;
+            right: 8rem;
+            opacity: 1;
+            animation: slideLeft;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+        }
+
+        .func1 {
+            position: absolute;
+            left: -10rem;
+            top: -2rem;
+            width: 70%;
+            font-family: 'Zeyada', cursive;
+            font-size: 3.5rem;
+            opacity: 0.1;
+            animation: slideRight;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #images-collection {
+            position: relative;
+            width: 21vw;
+            height: 22vw;
+            display: flex;
+        }
+
+        .lang {
+            -webkit-transition:all 0.3s ease;
+            -moz-transition:all 0.3s ease;
+            -o-transition:all 0.3s ease;
+            transition:all 0.3s ease;
+        }
+
+        #js {
+            position: relative;
+            height: 4rem;
+            right: 35rem;
+            top: -1rem;
+            width: 4rem;
+            border-radius: 10px;
+            transform: rotate(10deg);
+        }
+
+        #react {
+            position: relative;
+            height: 4rem;
+            width: 4rem;
+            top: 15rem;
+            right: 38rem;
+            border-radius: 10px;
+            transform: rotate(-10deg);
+            z-index: 4;
+        }
+        
+        #go {
+            position: relative;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 10px;
+            top: 1rem;
+            right: 17rem;
+            transform: rotate(-10deg);
+            pointer-events: none;
+        }
+
+        #node {
+            position: relative;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 10px;
+            top: 15rem;
+            right: 22rem;
+            transform: rotate(10deg);
+            pointer-events: none;
+        }
+
+        #medium-blue {
+            position: absolute;
+            width: 0;
+            height: 10rem;
+            left: -10rem;
+            bottom: -5rem;
+            z-index: -1;
+            -webkit-transition:all 0.3s ease;
+            -moz-transition:all 0.3s ease;
+            -o-transition:all 0.3s ease;
+            transition:all 0.3s ease;
+            z-index: 9;
+        }
+
+        #blue-boom {
+            position: relative;
+            width: 30rem;
+            height: 25rem;
+            right: 9rem;
+            bottom: -6rem;
+            z-index: -1;
+            opacity: 0;
+            transform: rotate(90);
+            -webkit-transition:all 0.3s ease;
+            -moz-transition:all 0.3s ease;
+            -o-transition:all 0.3s ease;
+            transition:all 0.3s ease;
+          
+        }
+
+        #boom-hide {
+            position: relative;
+            width: 30rem;
+            height: 25rem;
+            right: 35rem;
+            top: -8rem;
+            z-index: -1;
+            opacity: 0;
+            -webkit-transition:all 0.3s ease;
+            -moz-transition:all 0.3s ease;
+            -o-transition:all 0.3s ease;
+            transition:all 0.3s ease;
+            
+        }
+
+        .about-me-text {
+            position: relative;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        @keyframes fadeInName {
+        0% {
+        opacity: 0;
+        left: -100px;
+        }
+        100% {
+        opacity: 1;
+        left: 0px;
+        }
+        }
+
+        @keyframes fadeInJob {
+        0% {
+        opacity: 0;
+        right: -100px;
+        }
+        100% {
+        opacity: 1;
+        right: 0px;
+        }
+        }
+
+        @keyframes fadeIn {
+        0% {
+        opacity: 0;
+        }
+        100% {
+        opacity: 1;
+        }
+        }
+
+        @keyframes slideInLeft {
+        0% {
+        left: -100px;
+        }
+        100% {
+        left: 0px;
+        }
+        }
+
+        #job {
+            font-size: 7rem;
+            line-height: 6.5rem;
+            margin: 0;
+            color: black;
+            position: relative;
+            right: -100px;
+            opacity: 0;
+            animation-name: fadeInJob;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+            -webkit-transition: right 0.5s;
+            -moz-transition: right 0.5s;
+            -o-transition:right 0.5s;
+            transition:right 0.5s;
+        }
+
+
+
+        #name {
+            color: black;
+            position: relative;
+            left: -100px;
+            font-family: 'Caveat', cursive;
+            font-size: 7.5rem;
+            margin: 0;
+            opacity: 0;
+            animation-name: fadeInName;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+            -webkit-transition: left 0.5s;
+            -moz-transition: left 0.5s;
+            -o-transition:left 0.5s;
+            transition:left 0.5s;
+        }
+
+        #exp-in {
+            opacity: 0;
+            animation-name: fadeIn;
+            animation-duration: 2.3s;
+            animation-fill-mode: forwards;
+    margin-bottom: 1rem;
+    margin-left: 0;
+        }
+        .about-me-text h3 {
+            color: black;
+        }
+
+        .about-me-text h4 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .about-me-text h3 {
+            font-size: 2rem;
+        }
+
+        #animated-languages {
+            position: relative;
+            -webkit-transition:all 0.6s ease;
+            -moz-transition:all 0.6s ease;
+            -o-transition:all 0.6s ease;
+            transition:all 0.6s ease;
+            opacity: 0;
+        }
+
+        #animated-languages a {
+            background-color: rgba(0, 0, 0, 0);
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+            padding: 0;
+            font-size: 2rem;
+            -webkit-transition:all 1s ease;
+            -moz-transition:all 1s ease;
+            -o-transition:all 1s ease;
+            transition:all 1s ease;
+        }
+
+        #contact-links {
+            position: relative;
+            top: 2rem;
+            z-index: 11;
+        }
+
+        #contact-me {
+            height: fit-content;
+            width: fit-content;
+            font-size: 1.2rem;
+            border-top-right-radius: 50px 50px;
+            border-top-left-radius: 50px 50px;
+            border-bottom-right-radius: 50px 50px;
+            border-bottom-left-radius: 50px 50px;
+            border: none;
+            background-color: #0096FF;
+            color: white;
+            padding: 1rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+            cursor: pointer;
+            pointer-events: all;
+            -webkit-transition:all 0.6s ease;
+            -moz-transition:all 0.6s ease;
+            -o-transition:all 0.6s ease;
+            transition:all 0.6s ease;
+        }
+
+        #contact-me:hover {
+            color: black;
+            background-color: whitesmoke;
+        }
+
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #F9F9F9;
+            color: black;
+            padding-top: 5rem;
+            position: relative;
+            top: 3rem;
+            z-index: 4;
+            padding-bottom: 4rem;
+        }
+
+        .about-container h2 {
+            color: lightgray;
+            text-align: left;
+            font-size: 9rem;
+            left: 2rem;
+            position: relative;
+        }
+
+        #skills-text {
+            text-align: right;
+            right: 0;
+            position: relative;
+            margin-bottom: 0;
+        }
+
+        .about-container h2 i {
+            color: #0096FF;
+            position: relative;
+            z-index: 11;
+        }
+
+        .about-container .description {
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+            max-width: 50%;
+            text-align: center;
+            position: absolute;
+            font-size: 2rem;
+            top: 11.5rem;
+            left: 25%;
+            opacity: 0;
+        }
+
+        .slide {
+            animation: fadeIn;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        #about-section {
+            position: relative;
+            top: -4rem;
+            background-color: #F9F9F9;
+
+        }
+
+        .curve-exp {
+            position: absolute;
+            height: 225px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .curve-exp::after {
+            content: '';
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: whitesmoke;
+            transform: translate(85%, 69%);
+            z-index: 7;
+        }
+
+        .curve-exp::before {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #F9F9F9;
+            transform: translate(-4%, 51%);
+            z-index: 2;
+        }
+
+        .curve-int {
+            position: absolute;
+            height: 225px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .curve-int::after {
+            content: '';
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: whitesmoke;
+            transform: translate(85%, 63.5%);
+            z-index: 7;
+        }
+
+        .curve-int::before {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: white;
+            transform: translate(-4%, 45%);
+            z-index: 2;
+        }
+
+        .home-brand-btn {
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 1.5rem;
+            border: none;
+            color: black;
+            pointer-events: all;
+            cursor: pointer;
+        }
+
+        .home-brand-btn:hover {
+            font-size: 1.7rem;
+        }
+
+        .experience-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+            background-color: whitesmoke;
+            padding-top: 8rem;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+            background-color: white;
+            padding-top: 4rem;
+        }
+
+        .contact-container h2 {
+            text-align: center;
+            color: black;
+        }
+
+        .contact-container p {
+            text-align: center;
+            color: gray;
+            font-size: 1rem;
+        }
+
+        .experience-container h2 {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            z-index: 9;
+        }
+
+        #about-cards {
+            position: relative;
+            display: flex;
+            place-items: center;
+            flex-wrap: wrap;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            grid-gap: 0;
+           place-content: center;
+           grid-gap: 1rem;
+        }
+
+        @keyframes slideIn {
+        0% {
+        left: -4rem;
+        }
+        100% {
+        left: 0rem;
+        }
+        }
+
+        .slideIn {
+            animation: slideIn;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes slideInRt {
+        0% {
+        right: 1rem;
+        }
+        100% {
+        right: 7rem;
+        }
+        }
+
+        .slideInRt {
+            animation: slideInRt;
+            animation-duration: 1s;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes fadeInSlide {
+        0% {
+        opacity: 0;
+        left: -4rem;
+        }
+        100% {
+        opacity: 1;
+        left: 0rem;
+        }
+        }
+
+        .fade {
+            animation: fadeInSlide;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        .fadeIn {
+            animation: fadeIn;
+            animation-duration: 0.8s;
+            animation-fill-mode: forwards;
+        }
+
+        .card {
+            height: fit-content;
+            width: fit-content;
+            border-radius: 7px;
+            margin: 1rem;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .inside-card {
+            background-color: white;
+            z-index: 2;
+            height: 13vw;
+            width: 13vw;
+            padding: 2rem;
+            position: relative;
+            border-radius: 7px;
+            border: 1px solid lightgray;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .inside-card i {
+            font-size: 1.8rem;
+        }
+
+        .inside-card h3 {
+            font-size: 1rem;
+        }
+
+        .inside-card p {
+            font-size: 1.3rem;
+        }
+
+        .card i {
+            color: #0096FF;
+
+        }
+
+        .behind-card {
+            height: 13vw;
+            width: 13vw;
+            background-color: #0096FF;
+            padding: 2rem;
+            position: absolute;
+            border-radius: 7px;
+            -webkit-transition:all 0.3s ease;
+            -moz-transition:all 0.3s ease;
+            -o-transition:all 0.3s ease;
+            transition:all 0.3s ease;
+            z-index: -1;
+        }
+
+        .card:hover .behind-card {
+            transform: rotate(-10deg);
+        }
+
+        .skills li {
+            font-family: 'Roboto', sans-serif;
+            background-color: lightgray;
+            padding: 1rem;
+            border-radius: 7px;
+            font-weight: 600;
+        }
+
+        #internship {
+            background-color: whitesmoke;
+            position: relative;
+            height: 195vh;
+        }
+
+        #internship h2 {
+            text-align: left;
+            color: lightgray;
+            font-size: 4rem;
+            z-index: 900;
+            position: relative;
+        }
+
+        #exp {
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0 10rem;
+            align-items: left;
+        }
+
+        #internship-text {
+            display: flex;
+            justify-content: start;
+           position: relative;
+           z-index: 900;
+           flex-wrap: wrap;
+           top: 2rem;
+           left: 2rem;
+
+        }
+
+        .dev-type {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+            position: relative;
+            left: 5rem;
+            top: 1rem;
+            background-color: #0096ff;
+            width: fit-content;
+            padding: 0 1rem 0 1rem;
+        }
+
+        .intern-code {
+            color: #0096FF;
+            position: absolute;
+            right: 5rem;
+            font-family: 'Zeyada', cursive;
+            width: 30%;
+            font-size: 1.2rem;
+        }
+
+        #matts-rec {
+            position: relative;
+            display: flex;
+            top: 15rem;
+        }
+
+        #rec-img {
+            display: flex;
+            flex-direction: column;
+            z-index: 900;
+            position: relative;
+            top: 20rem;
+            right: 7rem;
+        }
+
+        #rec-img p {
+            color: black;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+        }
+
+        .rec-name {
+            margin-bottom: 0;
+        }
+
+        .rec-job {
+            margin-bottom: 0.5rem;
+        }
+
+        #rec-img img {
+            height: 20rem;
+            width: 20rem;
+            border-radius: 100%;
+            z-index: 900;
+            
+        }
+
+        @keyframes reveal {
+            0% {
+                width: 100%;
+                opacity: 1;
+            }
+            100% {
+                width: 0;
+                opacity: 0;
+            }
+        }
+
+        .reveal {
+            animation: reveal;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        .resume {
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            z-index: 900;
+            position: relative;
+            left: 5rem;
+            width: 40%;
+        }
+
+        .resume a {
+            background-color: black;
+            width: 100%;
+            height: 55%;
+            position: absolute;
+            left: 0;
+            top: -0.5rem;
+        }
+
+        .qt-1 {
+            font-size: 14rem;
+            color: lightgray;
+            font-family: 'Roboto', sans-serif;
+            z-index: 900;
+            position: absolute;
+            top: 1rem;
+            left: 10rem;
+        }
+
+        .qt-2 {
+            font-size: 14rem;
+            color: lightgray;
+            font-family: 'Roboto', sans-serif;
+            z-index: 900;
+            position: absolute;
+            top: 15rem;
+            left: 34rem;
+        }
+
+        #rec {
+            z-index: 900;
+            position: relative;
+            font-family: 'Roboto', sans-serif;
+            color: black;
+            font-size: 1.5rem;
+            bottom: 0;
+            top: 20rem;
+            margin: 0 15rem;
+            width: 40%;
+        }
+
+        #internship-text h3 {
+            position: relative;
+            color: black;
+            font-weight: 800;
+            font-size: 3rem;
+        }
+
+    
+
+        #internship-text .internship-pic {
+            position: relative;
+            height: 8rem;
+            width: 19rem;
+            border-radius: 7px;
+        }
+
+        #intern-pic {
+            height: 20rem;
+            width: 29rem;
+            position: absolute;
+            right: 13rem;
+            top: 14rem;
+        }
+
+        .internship-details {
+            position: relative;
+            bottom: 8rem;
+                }
+
+        .internship-details p {
+            position: relative;
+            color: black;
+margin-left: 17vw;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+
+        }
+
+        .experience-container h2 {
+            color: black;
+           
+        }
+
+        .internship-organizer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .internship-accomplishments {
+            position: absolute;
+            width: 100vw;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            right: 0;
+        }
+
+        .internship-accomplishments h6 {
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            margin: 0;
+            color: white;
+            padding: 0.5rem;
+            background-color: black;
+            border-top-right-radius: 50px 50px;
+            border-top-left-radius: 50px 50px;
+            border-bottom-right-radius: 50px 50px;
+            border-bottom-left-radius: 50px 50px;
+        }
+
+        .internship-accomplishments p {
+            width: 25%;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            position: relative;
+            top: 8rem;
+        }
+
+        #projects-cards {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .projects-container h2 {
+            color: lightgray;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+            text-align: right;
+            font-size: 4rem;
+        }
+
+        .project {
+            color: black;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        h2 {
+            color: #ecf0f1;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        li {
+            margin: 0.5em;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        @keyframes slideInProj {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .description {
+            text-align: center;
+        }
+
+        .project {
+            position: relative;
+            margin-bottom: 40px;
+            margin: 0 5rem;
+            display: flex;
+            margin-bottom: 10rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .project-content {
+            position: relative;
+            left: 0;
+        }
+
+        .slideInProj {
+            animation: slideInProj 1s ease-in-out;
+        }
+
+        .project-content {
+            max-width: 80%;
+            height: auto;
+        }
+
+
+        .phone-mockup {
+            height: 20rem;
+        }
+
+        .laptop-mockup {
+            height: 30rem;
+        }
+
+        .project h3 {
+            margin: 10px 0;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+            font-size: 3.5rem;
+        }
+
+        .project h5 {
+            font-size: 1.2rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+        }
+
+        .project p {
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            width: 40%;
+            font-size: 1.2rem;
+        }
+
+        .project #feature-guide-btn {
+            height: fit-content;
+            width: fit-content;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            padding: 0.7rem;
+            border-radius: 7px;
+            cursor: pointer;
+            pointer-events: all;
+            -webkit-transition:all 0.3s ease;
+            -moz-transition:all 0.3s ease;
+            -o-transition:all 0.3s ease;
+            transition:all 0.3s ease;
+        }
+
+        .project #feature-guide-btn:hover {
+            background-color: #2c3e50;
+            font-weight: 800;
+        }
+
+        .project a {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            background-color: rgba(0, 0, 0, 0);
+            color: #0096FF;
+            padding: 0;
+            margin-right: 1rem;
+        }
+
+        .project-btn {
+            color: white;
+            background-color: rgba(0, 0, 0, 1);
+            border: none;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            -webkit-transition:all 0.3s ease;
+            -moz-transition:all 0.3s ease;
+            -o-transition:all 0.3s ease;
+            transition:all 0.3s ease;
+            pointer-events: all;
+            cursor: pointer;
+            border-radius: 3px;
+            padding: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        #feature-list {
+            display: none;
+            -webkit-transition:all 0.3s ease;
+            -moz-transition:all 0.3s ease;
+            -o-transition:all 0.3s ease;
+            transition:all 0.3s ease;
+        }
+
+        #feature-list ul {
+            display: flex;
+            justify-content: start;
+            text-align: left;
+        }
+
+        #feature-list ul li {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+        }
+
+        .feature-p {
+            display: inline;
+            font-size: 1rem;
+        }
+
+        #contact-form {
+            width: 80vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        @media screen and (max-width: 1625px) {
+            #intern-pic {
+                right: 5rem;
+            }
+        }
+
+        @media screen and (max-width: 1416px) {
+            #exp {
+                margin: 0 2rem;
+            }
+          .inside-card {
+            height: 18vw;
+            width: 18vw;
+          }
+          .behind-card {
+            height: 18vw;
+            width: 18vw;
+          }
+          #intern-pic {
+               height: 13rem;
+               width: 19rem;
+            }
+
+            .intern-code {
+                opacity: 0.4;
+                width: 70vw;
+                left: 25rem;
+            }
+        #rec {
+            top: 5rem;
+        }
+        #rec-img {
+            top: 5rem;
+        } 
+        .qt-1 {
+            top: -14rem;
+        }
+        .qt-2 {
+        display: none;
+        }
+        }
+
+        @media screen and (max-width: 1187px) {
+            
+            .inside-card {
+            height: 20vw;
+            width: 20vw;
+          }
+          .behind-card {
+            height: 20vw;
+            width: 20vw;
+          }
+          #rec {
+            margin: 0 15rem 0 6rem;
+            width: 80%;
+          }
+          .qt-1 {
+            top: -14rem;
+            left: 1rem;
+        }
+        }
+
+        @media screen and (max-width: 866px) {
+            #intern-pic {
+               display: none;
+            }
+
+            .resume {
+                width: 85%;
+            }
+
+            .inside-card {
+            height: 25vw;
+            width: 25vw;
+          }
+          .behind-card {
+            height: 25vw;
+            width: 25vw;
+          }
+
+          .skills {
+            margin: 0 5rem;
+          }
+
+          #matts-rec {
+            flex-direction: column;
+          }
+          #rec-img {
+            align-items: center;
+            right: 0;
+            top: 7rem;
+          }
+          
+        }
+
+        @media screen and (max-width: 647px) {
+            #internship-text h3 {
+                margin: 0;
+                left: 3rem;
+            }
+
+            #internship-text {
+                left: 0;
+            }
+
+            .dev-type {
+                left: 3rem;
+            }
+
+            .resume {
+                left: 3rem;
+            }
+
+            #exp {
+                margin: 0 2rem 0 0;
+            }
+
+
+        }
+
+         
+
+        @media screen and (max-width: 776px) {
+            #job {
+                font-size: 6.5rem;
+                line-height: 5.5rem;
+            }
+        }
+
+        @media screen and (max-width: 670px) {
+            #job {
+                font-size: 5rem;
+            }
+
+            #name {
+                font-size: 6rem;
+            }
+
+            .behind-card {
+                width: 35vw;
+                height: 35vw;
+            }
+            .inside-card {
+                width: 35vw;
+                height: 35vw;
+            }
+        }
+
+        @media screen and (max-width: 539px) {
+            #job {
+                font-size: 4rem;
+                line-height: 3.5rem;
+            }
+
+            #name {
+                font-size: 5rem;
+            }
+
+            .behind-card {
+                width: 45vw;
+                height: 45vw;
+            }
+            .inside-card {
+                width: 45vw;
+                height: 45vw;
+            }
+
+            #about-cards {
+                top: 10rem;
+            }
+            #rec {
+                font-size: 1rem;
+                width: 60%;
+            }
+            #rec-img img {
+                height: 15rem;
+                width: 15rem;
+            }
+        }
+
+        @media screen and (max-width: 417px) {
+            #job {
+                font-size: 3rem;
+            }
+
+            #name {
+                font-size: 4rem;
+            }
+
+            #exp-in {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media screen and (max-width: 402px) {
+            #about-cards {
+                top: 20rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div id="nav" class="nav-container">
+            <h1>AV</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Experience</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-me">
+     <p class="func1">function BinarySearch(array, target, start, end) {
+        const middle = array.length - 1 / 2
+        if (start > end) {
+            return null
+        } else {
+            if (middle === target) {
+                return array.indexOf(array[middle]);
+            }
+            
+            if (middle < target) {
+               return BinarySearch(array, target, array.indexOf(middle) - 1, end)
+            }
+
+            if (middle > target) {
+                return BinarySearch(array, target, start, array.indexOf(middle) + 1)
+             }
+        }
+        }</p>
+        <div class="container1">
+            <div class="about-me-text">
+                <h2 id="name">Alex Valero</h2>
+                <h1 id="job">SOFTWARE DEVELOPER</h1>
+                <br>
+                <p id="exp-in" style="font-family: 'Roboto', sans-serif; font-size: 2.3rem; color:#0096ff; font-weight: 800;">EXPERIENCED IN</p>
+                <div id="animated-languages" style="color:black"></div>
+
+                <div id="contact-links">
+                    <button id="contact-me">Contact Me</button>
+                    <button class="home-brand-btn"><i class="fa fa-brands fa-github"></i></button>
+                    <button class="home-brand-btn"><i class="fa fa-brands fa-linkedin"></i></button>
+                </div>
+
+            </div>
+        
+     
+        <div id="images-collection">
+        </div>
+        </div>
+        <p class="func">
+            {
+                "name": "AlexValero",
+                "version": "2.0",
+                "description": "A passionate software developer who loves to build things and learn",
+                "main": "app.js",
+                "scripts": {
+                    "start": "npm run build && node ./dist/server.cjs"
+                },
+                "author:" "Alex Valero",
+                "license": "ISC"
+            }
+        </p>
+    </section>
+
+    <section id="about-section">
+        
+        <div class="about-container">
+            <h2 id="abt">ABOUT ME</h2>
+            <p id="desc" class="description">I am a passionate web developer based in the vibrant city of Miami. My background is in psychology but once I started to learn software development I never looked back.</p>
+            <div id="about-cards">
+                <div class="card">
+                    <div class="behind-card"></div>
+                <div class="inside-card">
+                    <i class="fab fa-brands fa-react"></i>
+                    <h3>React Web Developer</h3>
+                    <p>
+                        I use my experiance in React and JavaScript to build full stack web applications.
+                    </p>
+                </div>
+                </div>
+                
+                <div class="card">
+                    <div class="behind-card"></div>
+                    <div class="inside-card">
+                    <i class="fab fa-brands fa-css3-alt"></i>
+                    <h3>Responsive Websites</h3>
+                    <p>
+                        I make responsive webites using a mobile first approach tacking more global CSS styles first.
+                    </p>
+                </div>
+                </div>
+                
+                <div class="card">
+                    <div class="behind-card"></div>
+                <div class="inside-card">
+                    <i class="fa fa-solid fa-database"></i>
+                    <h3>Integrations</h3>
+                    <p>
+                        Experinaced in database integration, utilizing external APIs, creating endpoints, as well as server side rendering.
+                    </p>
+                </div>
+            </div>
+            
+            </div>
+
+            <h2 id="skills-text">Skills</h2>
+            <ul class="skills">
+               <li><i class="fa fa-brands fa-html5"></i> HTML</li>
+               <li><i class="fa fa-brands fa-css3"></i> CSS</li>
+               <li><i class="fa fa-solid fa-code"></i> JavaScript</li>
+               <li><i class="fab fa-brands fa-react"></i> React</li>
+               <li><i class="fab fa-brands fa-node"></i> Node</li>
+               <li><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><path d="M400.1 194.8C389.2 197.6 380.2 199.1 371 202.4C363.7 204.3 356.3 206.3 347.8 208.5L347.2 208.6C343 209.8 342.6 209.9 338.7 205.4C334 200.1 330.6 196.7 324.1 193.5C304.4 183.9 285.4 186.7 267.7 198.2C246.5 211.9 235.6 232.2 235.9 257.4C236.2 282.4 253.3 302.9 277.1 306.3C299.1 309.1 316.9 301.7 330.9 285.8C333 283.2 334.9 280.5 337 277.5V277.5L337 277.5C337.8 276.5 338.5 275.4 339.3 274.2H279.2C272.7 274.2 271.1 270.2 273.3 264.9C277.3 255.2 284.8 239 289.2 230.9C290.1 229.1 292.3 225.1 296.1 225.1H397.2C401.7 211.7 409 198.2 418.8 185.4C441.5 155.5 468.1 139.9 506 133.4C537.8 127.8 567.7 130.9 594.9 149.3C619.5 166.1 634.7 188.9 638.8 218.8C644.1 260.9 631.9 295.1 602.1 324.4C582.4 345.3 557.2 358.4 528.2 364.3C522.6 365.3 517.1 365.8 511.7 366.3C508.8 366.5 506 366.8 503.2 367.1C474.9 366.5 449 358.4 427.2 339.7C411.9 326.4 401.3 310.1 396.1 291.2C392.4 298.5 388.1 305.6 382.1 312.3C360.5 341.9 331.2 360.3 294.2 365.2C263.6 369.3 235.3 363.4 210.3 344.7C187.3 327.2 174.2 304.2 170.8 275.5C166.7 241.5 176.7 210.1 197.2 184.2C219.4 155.2 248.7 136.8 284.5 130.3C313.8 124.1 341.8 128.4 367.1 145.6C383.6 156.5 395.4 171.4 403.2 189.5C405.1 192.3 403.8 193.9 400.1 194.8zM48.3 200.4C47.05 200.4 46.74 199.8 47.36 198.8L53.91 190.4C54.53 189.5 56.09 188.9 57.34 188.9H168.6C169.8 188.9 170.1 189.8 169.5 190.7L164.2 198.8C163.6 199.8 162 200.7 161.1 200.7L48.3 200.4zM1.246 229.1C0 229.1-.3116 228.4 .3116 227.5L6.855 219.1C7.479 218.2 9.037 217.5 10.28 217.5H152.4C153.6 217.5 154.2 218.5 153.9 219.4L151.4 226.9C151.1 228.1 149.9 228.8 148.6 228.8L1.246 229.1zM75.72 255.9C75.1 256.8 75.41 257.7 76.65 257.7L144.6 258C145.5 258 146.8 257.1 146.8 255.9L147.4 248.4C147.4 247.1 146.8 246.2 145.5 246.2H83.2C81.95 246.2 80.71 247.1 80.08 248.1L75.72 255.9zM577.2 237.9C577 235.3 576.9 233.1 576.5 230.9C570.9 200.1 542.5 182.6 512.9 189.5C483.9 196 465.2 214.4 458.4 243.7C452.8 268 464.6 292.6 487 302.6C504.2 310.1 521.3 309.2 537.8 300.7C562.4 287.1 575.8 268 577.4 241.2C577.3 240 577.3 238.9 577.2 237.9z"/></svg> Go</li>
+            </ul>
+        </div>
+        <div class="curve-exp"></div>
+    </section>
+
+    <section id="internship">
+        <h2 id="profesh">PROFESSIONAL EXPERIENCE</h2>
+        <div id="exp">
+     <div id="internship-text">
+                <img class="internship-pic" src="vous.png" alt="">
+      <h3>Internship</h3>
+      <p class="intern-code">
+        package main
+
+        import "fmt"
+func plus(a int, b int) int {
+	return a + b
+}
+
+func plusPlus(a, b, c int) int {
+	return a + b + c
+}
+
+func main() {
+
+	res := plus(1, 2)
+	fmt.Println("1+2 =", res)
+
+	res = plusPlus(1, 2, 3)
+	fmt.Println("1+2+3 =", res)
+}
+      </p>
+      <img src="./internship.JPG" id="intern-pic" alt="">
+       </div>
+       <h3 class="dev-type">Full Stack Development</h3>
+       <p class="resume">Implemented business logic for an ecommerce section of the VOUSCon website which automated
+        tracking inventory of all merchandise and each of their variants.
+        <a class="resume-block"></a>
+        </p>
+        <p class="resume">Refined existing JavaScript Code and fixed bugs on the VOUS crew sign up website which eliminated
+            redundancies in the UX saving the user 3 additional steps. 
+            <a class="resume-block"></a>
+        </p>
+        <p class="resume">
+        Delivered cloud functions in GO for backend essentials such as querying data from the Shopify API and
+        sending custom push notifications for a mobile app. 
+        <a class="resume-block"></a>
+        </p>
+        </div>
+        <div id="matts-rec">
+        <p class="qt-1">"</p>
+        <h5 id="rec">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+        <p class="qt-2">"</p>
+        <div id="rec-img">
+        <img src="./internship.JPG" alt="">
+        <p class="rec-name">- Matthew Urbina</p>
+        <p class="rec-job">VOUS Tech Coordinator</p>
+        </div>
+        </div>
+        <div class="curve-int"></div>
+    </section>
+
+    <section>
+        <div class="projects-container">
+            <h2>PROJECTS</h2>
+            <br><br>
+            <div id="projects-cards">
+            <div class="project">
+                <div class="project-title">
+                <h3>Travel Smart</h3>
+                <a><i class="fab fa-brands fa-react"></i> React</a> 
+                <a><i class="fa fa-solid fa-code"></i> Javascript</a> 
+                <a><i class="fab fa-brands fa-node"></i> NodeJS</a> 
+                <a><i class="fa fa-solid fa-database"></i> Firebase</a> 
+                <a><i class="fa fa-brands fa-css3"></i> CSS</a> 
+                <a><i class="fa fa-brands fa-html5"></i> HTML</a>
+                <p>Discover A cities best places & get all the info you need. This travel planner allows you to discover new places and plan your trips all in one for cities here and abroad. </p>
+                <button class="project-btn"><i class="fa fa-solid fa-link"></i> Live Demo</button> 
+                <a class="project-btn" href="https://github.com/valeroscode/Travel-Smart" target="_blank"><i class="fab fa-brands fa-github"></i> See Code</a>
+            </div>
+            <div class="project-content">
+            <img class="laptop-mockup" src="travelsmart.png" alt="">
+                
+            
+            </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title">
+                <h3>TinCar</h3>
+                
+                
+                <a><i class="fab fa-brands fa-react"></i> React</a> 
+                <a><i class="fa fa-solid fa-code"></i></i> Javascript</a> 
+                <a><i class="fab fa-brands fa-node"></i> NodeJS</a> 
+                <a><i class="fa fa-solid fa-database"></i> MongoDB</a> 
+                <a><i class="fa fa-brands fa-css3"></i> CSS</a> 
+                <a><i class="fa fa-brands fa-html5"></i> HTML</a>
+                <p>Here to help car enthusiasts find their perfect used car. Explore hunderds of models acorss the most popular makes.
+                </p>
+                <button class="project-btn"><i class="fa fa-solid fa-link"></i> Live Demo</button>
+                <a class="project-btn" href="https://github.com/valeroscode/TinCar" target="_blank"><i class="fab fa-brands fa-github"></i> See Code</a>
+                </div>
+                <div class="project-content">
+                <img class="laptop-mockup" src="tincar-laptop-front.png" alt="">
+                <img class="phone-mockup" src="tincar-phone-portrait.png" alt="">
+                </div>
+                
+                
+            </div>
+
+          
+        </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <section>
+        <div class="contact-container">
+            <h2 class="section-heading">Get In Touch</h2>
+            <p><i class="fa fa-solid fa-envelope" style="color: #0096ff;"></i> Avalero.software@gmail.com</p>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/b3a13ef491.js" crossorigin="anonymous"></script>
+
+    <script>
+        const langs = document.getElementsByClassName('lang')
+    
+        const animatedLangs = document.getElementById('animated-languages')
+
+        const animatedLangsObj = {
+            languages: [
+            ['R','e','a','c','t'],
+            ['J','a','v','a','S','c','r','i','p','t'],
+            ['H','T','M','L'],
+            ['C','S','S'],
+            ['G','o'],
+            ['N','o','d','e','J','S']
+            ],
+            changeLang: function() {
+                let i = 0;
+                const loop = () => {
+                    const animation = () => {
+                    let letters = []
+                    this.languages[i].forEach(letter => letters.push(`<a>${letter}</a>`))
+                    this.languages[i] = letters
+                    animatedLangs.innerHTML = this.languages[i].join().replaceAll(',','')
+                    animatedLangs.style.opacity = 1;
+                    i++ 
+
+                    const scatter = () => {
+                        for (lang of animatedLangs.children) {
+                        var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+                        lang.style.transform = `translate(${Math.floor(Math.random() * 30) * plusOrMinus}px,
+                        ${Math.floor(Math.random() * 30) * plusOrMinus}px)`
+                        }
+                    }
+
+                    scatter()
+                    
+                    setTimeout(() => {
+                        for (lang of animatedLangs.children) {
+                        lang.style.transform = `translate(0,0)`
+                        }
+                    }, 150)
+
+                    setTimeout(() => {
+                        scatter()
+                        for (lang of animatedLangs.children) {
+                        lang.style.opacity = 0;
+                        animatedLangs.style.opacity = 0;
+                        }
+                    }, 3000)
+
+                    if (i >= this.languages.length) {
+                    i = 0;
+                    }
+                    if (i < this.languages.length) {
+                        loop()
+                    }
+                    }
+                    if (i === 0) {
+                        animation()
+                    } else {
+                    setTimeout(() => {
+                        animation()
+                    }, 4000)
+                    }
+                    
+                
+                }
+                loop()
+            },
+        }
+
+        animatedLangsObj.changeLang();
+
+    
+    const name = document.getElementById('name')
+    const job = document.getElementById('job')
+    const exp = document.getElementById('exp-in')
+    const desc = document.getElementById('desc')
+    const cards = document.getElementsByClassName('card')
+    const abt = document.getElementById('abt')
+    const skillsText = document.getElementById('skills-text')
+    const skills = document.getElementsByClassName('skills')
+    const block = document.getElementsByClassName('resume-block')
+    const internPic = document.getElementById('intern-pic')
+    const pro = document.getElementById('profesh')
+    const int_text = document.getElementById('internship-text')
+    const rec = document.getElementById('rec')
+    const recImg = document.getElementById('rec-img')
+    const project = document.getElementsByClassName('project')
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle('slide', entry.isIntersecting)
+        })
+    })
+    observer.observe(desc)
+
+    const observerCards = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle('fade', entry.isIntersecting)
+        })
+    })
+
+    const observerText = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle('fadeIn', entry.isIntersecting)
+        })
+    })
+
+    const observerBlock = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle('reveal', entry.isIntersecting)
+        })
+    })
+
+    const observerSlide = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle('slideIn', entry.isIntersecting)
+        })
+    })
+
+    const observerSlideRt = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle('slideInRt', entry.isIntersecting)
+        })
+    })
+
+    const observerProj = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle('slideInProj', entry.isIntersecting)
+        })
+    })
+
+    for (let i = 0; i < project.length; i++) {
+        observerProj.observe(project[i])
+    }
+
+    observerText.observe(int_text)
+    observerSlide.observe(rec)
+    observerSlideRt.observe(recImg)
+
+    for (let i = 0; i < block.length; i++) {
+        observerBlock.observe(block[i])
+    }
+
+    for (let i = 0; i < cards.length; i++) {
+        setTimeout(() => {
+            observerCards.observe(cards[i])
+        }, 600)
+    }
+
+    for (let i = 0; i < skills.length; i++) {
+        setTimeout(() => {
+            observerCards.observe(skills[i])
+        }, 600)
+    }
+
+    window.addEventListener('scroll', () => {
+        console.log(window.scrollY)
+        if (window.scrollY >= 500) {
+            abt.style.left = `${(window.scrollY - 500) / 2}px`
+        } else if (window.scrollY < 500) {
+            abt.style.left = 0;
+        }
+        if (window.scrollY >= 1300) {
+            skillsText.style.left = `-${(window.scrollY - 1300) / 2}px`
+        } else if (window.scrollY < 1300) {
+            skillsText.style.left = 0;
+        }
+
+        if (window.scrollY >= 2190) {
+            pro.style.left = `${(window.scrollY - 2190) / 2}px`
+        } else {
+            pro.style.left = '0px';
+        }
+
+        
+    })
+
+    </script>
+</body>
+
+</html>
