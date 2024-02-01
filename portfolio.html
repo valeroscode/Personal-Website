@@ -114,9 +114,11 @@
             padding: 40px 0;
             position: relative;
             width: 100vw;
+            z-index: 9999999999;
             top: 6rem;
 margin: 0 5rem;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+            background-color: white;
 
         }
 
@@ -470,6 +472,7 @@ margin: 0 5rem;
             right: 0;
             position: relative;
             margin-bottom: 0;
+            color: black;
         }
 
         .about-container h2 i {
@@ -718,12 +721,13 @@ margin: 0 5rem;
         #internship {
             background-color: whitesmoke;
             position: relative;
-            height: 195vh;
+            height: 150vh;
+            width: 100vw;
         }
 
         #internship h2 {
             text-align: left;
-            color: lightgray;
+            color: black;
             font-size: 4rem;
             z-index: 900;
             position: relative;
@@ -769,6 +773,58 @@ margin: 0 5rem;
             font-size: 1.2rem;
         }
 
+        #freelance {
+            position: relative;
+            top: 19rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #freelance div {
+            width: 75%;
+                                }
+
+        #freelance h2 {
+            text-align: left;
+            color: black;
+            background-color: whitesmoke;
+            width: 100vw;
+            margin-bottom: 0;
+                    }
+
+        #freelance h4 {
+            color: gray;
+            width: 100vw;
+            margin: 0;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-align: left;
+        } 
+
+        #freelance p {
+            color: black;
+            font-size: 1.2rem;
+            text-align: left;
+            position: relative;
+            width: 80%;
+        }
+
+        #scribble {
+            font-family: 'Zeyada', cursive;
+            color: #0096FF;
+            position: absolute;
+            right: 2rem;
+           width: 30rem;
+           top: 5rem;
+           font-size: 1.2rem;
+           z-index: 9999999999999;
+           opacity: 0.7;
+           font-weight: 300;
+        }
+
         #matts-rec {
             position: relative;
             display: flex;
@@ -782,6 +838,7 @@ margin: 0 5rem;
             position: relative;
             top: 20rem;
             right: 7rem;
+            display: none;
         }
 
         #rec-img p {
@@ -831,6 +888,9 @@ margin: 0 5rem;
             position: relative;
             left: 5rem;
             width: 40%;
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-bottom: 0;
         }
 
         .resume a {
@@ -850,6 +910,7 @@ margin: 0 5rem;
             position: absolute;
             top: 1rem;
             left: 10rem;
+            display: none;
         }
 
         .qt-2 {
@@ -860,6 +921,7 @@ margin: 0 5rem;
             position: absolute;
             top: 15rem;
             left: 34rem;
+            display: none;
         }
 
         #rec {
@@ -872,6 +934,7 @@ margin: 0 5rem;
             top: 20rem;
             margin: 0 15rem;
             width: 40%;
+            display: none;
         }
 
         #internship-text h3 {
@@ -879,6 +942,7 @@ margin: 0 5rem;
             color: black;
             font-weight: 800;
             font-size: 3rem;
+
         }
 
     
@@ -896,6 +960,7 @@ margin: 0 5rem;
             position: absolute;
             right: 13rem;
             top: 14rem;
+            border-radius: 7px;
         }
 
         .internship-details {
@@ -998,10 +1063,11 @@ margin-left: 17vw;
             position: relative;
             text-align: center;
             z-index: 9999;
-            color: lightgray;
+            color: black;
             font-family: 'Roboto', sans-serif;
             font-size: 4.5rem;
-
+            top: 5rem;
+            margin-bottom: 8rem;
         }
 
         .project {
@@ -1053,10 +1119,11 @@ margin-left: 17vw;
             color: white;
             margin-bottom: 1rem;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 1rem;
             border-radius: 3px;
             border: none;
             margin-right: 1rem;
+            cursor: pointer;
         }
 
         .project-title p {
@@ -1075,6 +1142,47 @@ margin-left: 17vw;
             border-radius: 5px;
             margin-top: 10px;
         }
+
+        .about-container .description a {
+            background-image: radial-gradient(
+      64% 70% at 100% 0%,
+      rgba(247, 214, 98, 0.8) 0%,
+      rgba(247, 214, 98, 0.2) 52%,
+      rgba(247, 214, 98, 0) 100%
+    ),
+    linear-gradient(
+      208deg,
+      rgba(240, 66, 42, 1) 7%,
+      rgba(240, 88, 42, 0.2) 43%,
+      rgba(240, 101, 42, 0) 64%
+    ),
+    radial-gradient(
+      115% 123% at 0% -15%,
+      rgba(231, 79, 106, 1) 1%,
+      rgba(231, 79, 106, 0.2) 67%,
+      rgba(231, 79, 106, 0) 100%
+    ),
+    linear-gradient(
+      334deg,
+      rgba(83, 208, 236, 0.8) 0%,
+      rgba(83, 208, 236, 0.2) 20%,
+      rgba(138, 137, 190, 0) 35%
+    ),
+    radial-gradient(
+      109% 149% at 4% 98%,
+      rgba(27, 49, 128, 1) 0%,
+      rgba(27, 49, 128, 0) 100%
+    ),
+    linear-gradient(
+      142deg,
+      rgba(78, 173, 235, 1) 19%,
+      rgba(78, 173, 235, 0) 99%
+    );
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 0;
+            margin-top: 0;
+            }
 
         @media screen and (max-width: 1720px) {
             .behind-card {
@@ -1319,18 +1427,63 @@ margin-left: 17vw;
                 margin: 0;
                 position: relative;
                 width: 90vw;
-                left: 3rem;
+                left: 1rem;
             }
             .skills {
                 margin: 0 1rem;
             }
 
-        }
-
-        @media screen and (max-width: 417px) {
-            #exp {
-                left: 4rem;
+            #scribble {
+                display: none;
             }
+
+            .coming-soon {
+                display: none;
+            }
+
+            .about-container .description {
+                left: 5%;
+                max-width: 90%;
+            }
+
+            #internship h2 {
+                font-size: 3.5rem;
+            }
+
+            #internship {
+                height: 230vh;
+            }
+
+            #freelance {
+                top: 23rem;
+            }
+
+            #freelance h4 {
+                width: 80vw;
+            }
+
+            #freelance p {
+                width: 100%;
+            }
+
+            #proj-section {
+                position: relative;
+                top: 5rem;
+            }
+
+            .curve-int {
+                bottom: 0;
+            }
+
+            #skills-sec {
+                position: relative;
+                padding: 12rem 0;
+            }
+
+            #freelance {
+                top: 28rem;
+            }
+
         }
 
         @media screen and (max-width: 417px) {
@@ -1344,6 +1497,52 @@ margin-left: 17vw;
 
             #exp-in {
                 font-size: 1.8rem;
+            }
+            #internship {
+                height: 256vh;
+            }
+
+            .projects-container {
+                position: relative;
+                bottom: 10rem;
+            }
+
+            #proj-section {
+                position: relative;
+                top: 12rem;
+            }
+        }
+
+        @media screen and (max-width: 390px) {
+            #internship {
+                height: 261vh;
+            }
+
+            .projects-container {
+                position: relative;
+                bottom: 2rem;
+            }
+
+            #freelance {
+                top: 32rem;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            #exp {
+                left: 0;
+            }
+            #freelance {
+                top: 36rem;
+            }
+            #internship {
+                height: 335vh;
+            }
+            .card {
+                padding: 0;
+            }
+            #internship h2 {
+                font-size: 3rem;
             }
         }
 
@@ -1414,6 +1613,7 @@ margin-left: 17vw;
             <div class="about-me-text">
                 <h2 id="name">Alex Valero</h2>
                 <h1 id="job">SOFTWARE DEVELOPER</h1>
+              
                 <br>
                 <p id="exp-in" style="font-family: 'Roboto', sans-serif; font-size: 2.3rem; color:#0096ff; font-weight: 800;">EXPERIENCED IN</p>
                 <div id="animated-languages" style="color:black"></div>
@@ -1448,7 +1648,12 @@ margin-left: 17vw;
         
         <div class="about-container">
             <h2 id="abt">ABOUT ME</h2>
-            <p id="desc" class="description">I am a passionate web developer based in the vibrant city of Miami. My background is in psychology but once I started to learn software development I never looked back.</p>
+            <p id="desc" class="description">
+                👋, My name is Alex Valero & I am a self taught developer based
+                in the vibrant city of <a>Miami.</a> 
+                My background is originally in psychology and applied behavior analysis, but once I started to learn software development I never looked back!
+                I enjoy delivering code that's efficient & I take a very detail oriented approach to my work.
+            Check it out! 👇</p>
             <div id="about-cards">
                 <div class="card">
                     <div class="behind-card"></div>
@@ -1467,7 +1672,7 @@ margin-left: 17vw;
                     <i class="fab fa-brands fa-css3-alt"></i>
                     <h3>Responsive Websites</h3>
                     <p>
-                        I make responsive webites using a mobile first approach tacking more global CSS styles first.
+                        I make responsive websites using a mobile first approach tackling more global CSS styles first.
                     </p>
                 </div>
                 </div>
@@ -1485,6 +1690,7 @@ margin-left: 17vw;
             
             </div>
 
+            <div id="skills-sec">
             <h2 id="skills-text">Skills</h2>
             <ul class="skills">
                <li><i class="fa fa-brands fa-html5"></i> HTML</li>
@@ -1494,6 +1700,7 @@ margin-left: 17vw;
                <li><i class="fab fa-brands fa-node"></i> Node</li>
                <li><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><path d="M400.1 194.8C389.2 197.6 380.2 199.1 371 202.4C363.7 204.3 356.3 206.3 347.8 208.5L347.2 208.6C343 209.8 342.6 209.9 338.7 205.4C334 200.1 330.6 196.7 324.1 193.5C304.4 183.9 285.4 186.7 267.7 198.2C246.5 211.9 235.6 232.2 235.9 257.4C236.2 282.4 253.3 302.9 277.1 306.3C299.1 309.1 316.9 301.7 330.9 285.8C333 283.2 334.9 280.5 337 277.5V277.5L337 277.5C337.8 276.5 338.5 275.4 339.3 274.2H279.2C272.7 274.2 271.1 270.2 273.3 264.9C277.3 255.2 284.8 239 289.2 230.9C290.1 229.1 292.3 225.1 296.1 225.1H397.2C401.7 211.7 409 198.2 418.8 185.4C441.5 155.5 468.1 139.9 506 133.4C537.8 127.8 567.7 130.9 594.9 149.3C619.5 166.1 634.7 188.9 638.8 218.8C644.1 260.9 631.9 295.1 602.1 324.4C582.4 345.3 557.2 358.4 528.2 364.3C522.6 365.3 517.1 365.8 511.7 366.3C508.8 366.5 506 366.8 503.2 367.1C474.9 366.5 449 358.4 427.2 339.7C411.9 326.4 401.3 310.1 396.1 291.2C392.4 298.5 388.1 305.6 382.1 312.3C360.5 341.9 331.2 360.3 294.2 365.2C263.6 369.3 235.3 363.4 210.3 344.7C187.3 327.2 174.2 304.2 170.8 275.5C166.7 241.5 176.7 210.1 197.2 184.2C219.4 155.2 248.7 136.8 284.5 130.3C313.8 124.1 341.8 128.4 367.1 145.6C383.6 156.5 395.4 171.4 403.2 189.5C405.1 192.3 403.8 193.9 400.1 194.8zM48.3 200.4C47.05 200.4 46.74 199.8 47.36 198.8L53.91 190.4C54.53 189.5 56.09 188.9 57.34 188.9H168.6C169.8 188.9 170.1 189.8 169.5 190.7L164.2 198.8C163.6 199.8 162 200.7 161.1 200.7L48.3 200.4zM1.246 229.1C0 229.1-.3116 228.4 .3116 227.5L6.855 219.1C7.479 218.2 9.037 217.5 10.28 217.5H152.4C153.6 217.5 154.2 218.5 153.9 219.4L151.4 226.9C151.1 228.1 149.9 228.8 148.6 228.8L1.246 229.1zM75.72 255.9C75.1 256.8 75.41 257.7 76.65 257.7L144.6 258C145.5 258 146.8 257.1 146.8 255.9L147.4 248.4C147.4 247.1 146.8 246.2 145.5 246.2H83.2C81.95 246.2 80.71 247.1 80.08 248.1L75.72 255.9zM577.2 237.9C577 235.3 576.9 233.1 576.5 230.9C570.9 200.1 542.5 182.6 512.9 189.5C483.9 196 465.2 214.4 458.4 243.7C452.8 268 464.6 292.6 487 302.6C504.2 310.1 521.3 309.2 537.8 300.7C562.4 287.1 575.8 268 577.4 241.2C577.3 240 577.3 238.9 577.2 237.9z"/></svg> Go</li>
             </ul>
+        </div>
         </div>
     </section>
 
@@ -1527,23 +1734,64 @@ func main() {
       <img src="./internship.JPG" id="intern-pic" alt="">
        </div>
        <h3 class="dev-type">Full Stack Development</h3>
-       <p class="resume">Implemented business logic for an ecommerce section of the VOUSCon website which automated
-        tracking inventory of all merchandise and each of their variants.
+       <p class="resume">Using JavaScript, I implemented business logic for an ecommerce segment the VOUSCon website, thereby automating
+        the tracking of inventory for all merchandise and their respective variants.
         <a class="resume-block"></a>
         </p>
-        <p class="resume">Refined existing JavaScript Code and fixed bugs on the VOUS crew sign up website which eliminated
-            redundancies in the UX saving the user 3 additional steps. 
+        <p class="resume">Refined existing JavaScript Code and rectified bugs on the VOUS crew sign up website, thereby streamlining
+            the user experience and eliminating redundancies which enabled users to skip three previously existing steps. 
             <a class="resume-block"></a>
         </p>
+        <p class="resume">
+            Produced backend code in GO to facilitate the implementation of custom push notifications within an upcoming iOS application.
+            <a class="resume-block"></a>
+            </p>
         <p class="resume">
         Delivered cloud functions in GO for backend essentials such as querying data from the Shopify API. 
         <a class="resume-block"></a>
         </p>
-        <p class="resume">
-        Produced backend code in GO that will allow for custom push notifications to be sent for an upcoming IOS application.
-        <a class="resume-block"></a>
-        </p>
         </div>
+
+        <div id="freelance">
+            <div>
+            <h2>Freelance Experience</h2>
+            <h4>At the moment I am unable to disclose information about the client, but here are
+                some of the things I delivered on 👇
+            </h4>
+            <p>
+                Developed a fully functional and engaging website comprising five distinct sections, with the aim of attracting prospective business partners and to facilitate the recruitment of new talent.
+                For potential new hires, I streamlined the job-search process by developing a filtering system characterized by seamless functionality, devoid of latency, and featuring intuitively comprehensible and simple code. 
+                
+            </p>
+            <p>
+                Leveraging the capabilities of React, the UI I built is quick and engaging. My approach involved a thorough consideration of potential user pain points, guiding decisions such as prioritizing rapid navigation and strategically pausing moving elements to enhance readability during user interactions with the website.
+            </p>
+            <p>
+            Other highlights involve adhering meticulously to legal guidelines, promptly implementing adjustments to the website, and successfully meeting the pre-established criteria during the initial formal review of the website.
+            </p>
+            
+        </div>
+        <h5 id="scribble">
+            function bubbleSort(arr) {
+                const n = arr.length;
+            
+                for (let i = 0; i < n - 1; i++) {
+                    for (let j = 0; j < n - i - 1; j++) {
+                        // Compare adjacent elements
+                        if (arr[j] > arr[j + 1]) {
+                            // Swap if they are in the wrong order
+                            const temp = arr[j];
+                            arr[j] = arr[j + 1];
+                            arr[j + 1] = temp;
+                        }
+                    }
+                }
+            
+                return arr;
+            }
+        </h5>
+        </div>
+
         <div id="matts-rec">
         <p class="qt-1">"</p>
         <h5 id="rec">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
@@ -1557,7 +1805,7 @@ func main() {
         <div class="curve-int"></div>
     </section>
 
-    <section>
+    <section id="proj-section">
         <div class="projects-container">
             <h2>PROJECTS</h2>
             <br><br>
@@ -1571,13 +1819,13 @@ func main() {
                 <a><i class="fa fa-solid fa-database"></i> Firebase</a> 
                 <a><i class="fa fa-brands fa-css3"></i> CSS</a> 
                 <a><i class="fa fa-brands fa-html5"></i> HTML</a>
-                <p>Discover A cities best places & get all the info you need. This travel planner allows you to discover new places and plan your trips all in one for cities here and abroad. </p>
+                <p>Discover a citie's best places & get all the info you need. This travel planner allows you to discover new places and plan your trips all in one for cities here and abroad. </p>
                 <button class="project-btn"><i class="fa fa-solid fa-link"></i> Live Demo</button> 
                 <a class="project-btn" href="https://github.com/valeroscode/Travel-Smart" target="_blank"><i class="fab fa-brands fa-github"></i> See Code</a>
             </div>
             <div class="project-content">
             <img class="laptop-mockup" src="travelsmart-front.png" alt="">
-            <img class="phone-mockup" src="travelsmart-front-portrait.png" alt="">
+            <img class="phone-mockup" src="travelsmart-portrait.png" alt="">
                 
             
             </div>
@@ -1602,6 +1850,28 @@ func main() {
                 <div class="project-content">
                 <img class="laptop-mockup" src="tincar-laptop-front.png" alt="">
                 <img class="phone-mockup" src="tincar-phone-portrait.png" alt="">
+                </div>
+                
+                
+            </div>
+
+            <div class="project">
+                <div class="project-title">
+                <h3>Um... Acctually</h3>
+                
+                
+                <a><i class="fab fa-brands fa-react"></i> React</a> 
+                <a><i class="fa fa-solid fa-code"></i></i> Javascript</a> 
+                <a><i class="fab fa-brands fa-node"></i> NodeJS</a> 
+                <a><i class="fa fa-solid fa-database"></i> MongoDB</a> 
+                <a><i class="fa fa-brands fa-css3"></i> CSS</a> 
+                <a><i class="fa fa-brands fa-html5"></i> HTML</a>
+                <p>An engaging and educational blog that spans the various subtopics of International Relations.
+                </p>
+                <a class="project-btn" href="https://github.com/valeroscode/TinCar" target="_blank"><i class="fab fa-brands fa-github"></i> See Code</a>
+                </div>
+                <div class="project-content">
+                <h2 class="coming-soon">COMING SOON</h2>
                 </div>
                 
                 
@@ -1633,7 +1903,6 @@ func main() {
             ['J','a','v','a','S','c','r','i','p','t'],
             ['H','T','M','L'],
             ['C','S','S'],
-            ['G','o'],
             ['N','o','d','e','J','S']
             ],
             changeLang: function() {
@@ -1669,7 +1938,7 @@ func main() {
                         lang.style.opacity = 0;
                         animatedLangs.style.opacity = 0;
                         }
-                    }, 3000)
+                    }, 1800)
 
                     if (i >= this.languages.length) {
                     i = 0;
@@ -1683,7 +1952,7 @@ func main() {
                     } else {
                     setTimeout(() => {
                         animation()
-                    }, 4000)
+                    }, 2800)
                     }
                     
                 
@@ -1780,8 +2049,9 @@ func main() {
         }, 600)
     }
 
+    observerCards.observe(document.getElementById('freelance'))
+
     window.addEventListener('scroll', () => {
-        console.log(window.scrollY)
         //Tablet scrolling cases
         if (window.innerWidth < 539) {
             if (window.scrollY >= 3000) {
