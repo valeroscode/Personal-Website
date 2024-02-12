@@ -469,6 +469,11 @@ margin: 0 5rem;
 	top: 2rem;
         }
 
+	.thro-my {
+	border-left: 3px solid black;
+    padding-left: 0.5rem;
+	}
+
         #skills-text {
             text-align: right;
             right: 0;
@@ -1454,9 +1459,16 @@ margin-left: 17vw;
         }
 
         @media screen and (max-width: 484px) {
+	.thro-my {
+	border-left: 0px solid black;
+    	padding-left: 0;
+	}
 	.about-container .description h3 {
 		font-size: 2.5rem;
 	}
+		.about-container .description #headshot-with-info p {
+			margin-right: 0;
+		}
 	
             #exp {
                 margin: 0;
@@ -1491,16 +1503,9 @@ margin-left: 17vw;
                 font-size: 3.5rem;
             }
 
-            #internship {
-                height: 230vh;
-            }
-
 	    #freelance div {
 		left: 0;
 	    }
-            #freelance h4 {
-                width: 80vw;
-            }
 
             #freelance p {
                 width: 126%;
@@ -1565,7 +1570,7 @@ margin-left: 17vw;
 
         @media screen and (max-width: 402px) {
             #about-cards {
-                top: 20rem;
+                top: 0rem;
             }
             .laptop-mockup {
                 height: 6rem;
@@ -1677,10 +1682,7 @@ margin-left: 17vw;
     display: flex;
     flex-direction: row-reverse;
 ">
-		<p style="
-    border-left: 3px solid black;
-    padding-left: 0.5rem;
-">Through my professional work and personal projects I've gained a deep understanding of both frontend and backend development.</p>
+		<p class="thro-my">Through my professional work and personal projects I've gained a deep understanding of both frontend and backend development.</p>
 		<p>As a self taught developer I've sharpened my skills over time doing what I love most - creating.</p>
 		</div>
 		</div></div>
