@@ -2095,6 +2095,8 @@ func main() {
     observerCards.observe(document.getElementById('freelance'))
 
     window.addEventListener('scroll', () => {
+	    console.log(window.scrollY)
+	    
         //Tablet scrolling cases
         if (window.innerWidth < 539) {
             if (window.scrollY >= 3000) {
