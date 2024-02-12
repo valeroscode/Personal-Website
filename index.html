@@ -1071,6 +1071,10 @@ margin-left: 17vw;
         .description {
             text-align: center;
         }
+	.about-details-div {
+	display: flex;
+    flex-direction: row-reverse;
+	}
 
         .slideInProj {
             animation: slideInProj 1s ease-in-out;
@@ -1459,6 +1463,9 @@ margin-left: 17vw;
         }
 
         @media screen and (max-width: 484px) {
+	.about-details-div {
+    	flex-direction: column-reverse;
+	}
 	.about-container .description #headshot-with-info p {
 	margin-right: 1rem;
 	}
@@ -1685,10 +1692,7 @@ margin-left: 17vw;
                 <h3>I'm Alex Valero, a full-stack developer based in the vibrant city of <a>Miami.</a></h3>
 		<div id="headshot-with-info">
 		<img src="./headshot.jpg"/>
-		<div style="
-    display: flex;
-    flex-direction: row-reverse;
-">
+		<div class="about-details-div">
 		<p class="thro-my">Through my professional work and personal projects I've gained a deep understanding of both frontend and backend development.</p>
 		<p>As a self taught developer I've sharpened my skills over time doing what I love most - creating.</p>
 		</div>
