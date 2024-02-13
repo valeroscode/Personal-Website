@@ -2107,9 +2107,9 @@ func main() {
 	    console.log(window.scrollY)
 	    if (window.innerWidth < 440) {
             if (window.scrollY >= 3300) {
-                pro.style.left = `${(window.scrollY - 3000) / 2}px`
-            } else {
-                pro.style.left = '0px';
+                pro.style.left = `${(window.scrollY - 3300) / 2}px`
+            } else if (window.scrollY < 3300) {
+                pro.style.left = 0;
             }
             if (window.scrollY >= 500) {
             abt.style.left = `${(window.scrollY - 500) / 2}px`
