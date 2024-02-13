@@ -2112,9 +2112,8 @@ func main() {
             } else if (window.scrollY < 2700) {
             skillsText.style.left = 0;
             }
-        }
-        //Tablet scrolling cases
-        if (window.innerWidth < 539) {
+        } 
+	else if (window.innerWidth < 539 && window.innerWidth > 440) {
             if (window.scrollY >= 3000) {
                 pro.style.left = `${(window.scrollY - 3000) / 2}px`
             } else {
