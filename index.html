@@ -2096,7 +2096,23 @@ func main() {
 
     window.addEventListener('scroll', () => {
 	    console.log(window.scrollY)
-	    
+	    if (window.innerWidth < 440) {
+            if (window.scrollY >= 3111) {
+                pro.style.left = `${(window.scrollY - 3000) / 2}px`
+            } else {
+                pro.style.left = '0px';
+            }
+            if (window.scrollY >= 500) {
+            abt.style.left = `${(window.scrollY - 500) / 2}px`
+            } else if (window.scrollY < 500) {
+            abt.style.left = 0;
+            }
+            if (window.scrollY >= 2611) {
+            skillsText.style.left = `-${(window.scrollY - 2500) / 2}px`
+            } else if (window.scrollY < 2500) {
+            skillsText.style.left = 0;
+            }
+        }
         //Tablet scrolling cases
         if (window.innerWidth < 539) {
             if (window.scrollY >= 3000) {
