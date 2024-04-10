@@ -421,6 +421,23 @@
                 transition: all 1s ease;
             }
 
+        .coming {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin: 0;
+        }
+
+        .coming svg {
+            height: 1.5rem;
+            margin-left: 0;
+            margin-right: 0.5rem;
+        }
+
+        .coming p {
+            color: gray;
+        }
+
         #contact-links {
             position: relative;
             top: 2rem;
@@ -978,7 +995,7 @@
             color: black;
             font-weight: 800;
             font-size: 3rem;
-            font-family: 'Roboto';
+            font-family: "M PLUS 1 Code", monospace;
         }
 
 
@@ -1167,8 +1184,8 @@
             padding: 0;
             background-color: rgba(0, 0, 0, 0);
             color: black;
-            font-family: 'Roboto', sans-serif;
-            margin: 1rem 1rem 1rem 0;
+            font-family: "M PLUS 1 Code", monospace;
+            margin: 1rem 1rem 0rem 0;
         }
 
         .project-btn {
@@ -1219,6 +1236,8 @@
             font-weight: 800;
             font-family: 'Roboto';
             border-radius: 0;
+            position: relative;
+            border-radius: 7px;
         }
 
         @media screen and (max-width: 1720px) {
@@ -1802,7 +1821,8 @@
                <li><i class="fa fa-brands fa-css3"></i> CSS</li>
                <li><i class="fa fa-solid fa-code"></i> JavaScript</li>
                <li><i class="fab fa-brands fa-react"></i> React</li>
-               <li><i class="fab fa-brands fa-node"></i> Node</li>
+               <li><i class="fab fa-brands fa-node"></i> NodeJS</li>
+               <li><i class="fab fa-brands fa-golang"></i> GO</li>
             </ul>
         </div>
         </div>
@@ -1911,6 +1931,10 @@ func main() {
             <div class="project">
                 <div class="project-title">
                 <h3>Travel Smart</h3>
+                <div class="coming">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#FFD43B" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
+                <p style="color: gray;">Launching for real users soon</p>
+                </div>
                 <a class="lang"><i class="fab fa-brands fa-react"></i> React</a> 
                 <a class="lang"><i class="fa fa-solid fa-code"></i> Javascript</a> 
                 <a class="lang"><i class="fa fa-solid fa-database"></i> Firebase</a> 
@@ -1958,7 +1982,10 @@ func main() {
 	     <div class="project">
                 <div class="project-title">
                 <h3>Umm... Actually</h3>
-                
+                <div class="coming">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#FFD43B" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
+                <p style="color: gray;">Launching for real users soon</p>
+                </div>
                 
                 <a  class="lang"><i class="fab fa-brands fa-react"></i> React</a> 
                 <a  class="lang"><i class="fab fa-brands fa-node"></i> NodeJS</a> 
@@ -2005,7 +2032,6 @@ func main() {
             ['C','S','S'],
             ['N', 'o', 'd', 'e', 'J', 'S'],
             ['G', 'O'],
-                ['J', 'A', 'V', 'A'],
             ['L', 'A', 'N', 'G']
             ],
             changeLang: function() {
