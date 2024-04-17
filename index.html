@@ -123,14 +123,6 @@
             background-color: white;
         }
 
-            .about-me img {
-                position: absolute;
-                width: 22rem;
-                display: none;
-                height: 23rem;
-                border-radius: 7px;
-            }
-
             .about-me p {
                 color: #0096FF;
                 margin-left: 4rem;
@@ -523,13 +515,22 @@
             max-width: 50%;
             text-align: left;
             position: relative;
-            font-size: 2rem;
+            font-size: 1.3rem;
             opacity: 0;
         }
 
             .about-container .description h3 {
                 font-size: 3rem;
                 font-family: "M PLUS 1 Code", monospace;
+                text-align: center;
+            }
+
+            .about-container .description h4 {
+                text-align: center;
+                font-family: "M PLUS 1 Code", monospace;
+                margin: 0;
+                font-size: 2rem;
+                margin-bottom: 1rem;
             }
 
             .about-container .description #headshot-with-info {
@@ -1110,9 +1111,39 @@
             text-align: center;
         }
 
-        .about-details-div {
+        .about-details {
+            margin-top: 4rem;
+        }
+
+        .about-item {
             display: flex;
-            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: start;
+            margin-top: 0;
+            margin-bottom: 6rem;
+        }
+        .whatdoesitmean {
+            font-family: "M PLUS 1 Code", monospace;
+            font-size: 1rem;
+        }
+
+        .about-item h1 {
+            font-family: "M PLUS 1 Code", monospace;
+            font-size: 10rem;
+            color: lightgray;
+            margin-right: 1rem;
+            margin-top: 0;
+            text-align: start;
+            margin-bottom: 0;
+            position: relative;
+            bottom: 2.3rem;
+        }
+
+        .about-item h5 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-family: "M PLUS 1 Code", monospace;
         }
 
 
@@ -1370,10 +1401,6 @@
                 align-items: center;
             }
 
-            .headshot-resume {
-                display: none;
-            }
-
             #intern-pic {
                 display: none;
             }
@@ -1405,6 +1432,20 @@
                 align-items: center;
                 right: 0;
                 top: 7rem;
+            }
+        }
+
+        @media screen and (max-width: 793px) {
+            .about-item {
+                flex-direction: column;
+            }
+
+            .about-item h1 {
+                font-size: 3rem;
+            }
+
+            #desc {
+                max-width: 90%;
             }
         }
 
@@ -1543,13 +1584,9 @@
                 z-index: 10000000000;
             }
 
-                .about-container .description #headshot-with-info p {
-                    margin-right: 1rem;
-                }
-
             #desc {
-                max-width: 96%;
-                margin-right: 1rem;
+  
+                width: 100%;
             }
 
             .thro-my {
@@ -1587,7 +1624,7 @@
             }
 
             .about-container .description {
-                left: 5%;
+         
                 max-width: 90%;
             }
 
@@ -1741,9 +1778,8 @@
                     <a href="https://github.com/valeroscode" target="_blank" class="home-brand-btn"><i class="fa fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/alex-valero-3416b52a1/" target="_blank" class="home-brand-btn"><i class="fa fa-brands fa-linkedin"></i></a>
                 </div>
-
-            </div>
-        
+           
+            </div>    
      
         <div id="images-collection">
         </div>
@@ -1769,21 +1805,44 @@
             <h2 id="abt">ABOUT ME</h2>
             <div id="desc" class="description">
                 <h3>I'm Alex Valero, a developer based in the vibrant city of <a class="miami">Miami.</a></h3>
-		<div id="headshot-with-info">
-		<div class="headshot-resume">
-		<img src="./headshot.jpg"/>
+                <h4>Here are the spark notes...</h4>
+                <div class="about-details">
+            <div class="about-item">
+                <h1>01</h1>
+                <div>
+                <h5>I am Self Taught</h5>
+                <p><i>Years ago,</i> my journey began after writing my first few lines in C thanks to Harvard's free CS50 course. At the time I was in college studying psychology. I took on programming as a hobby and shortly after commited to pursuing it fully. With coding, 2 major aspects appealed to me: <strong>continuous learning</strong> and the power to <strong>build</strong> anything.</p>
+      
+                <p class="whatdoesitmean">Self-Starter ∙ Highly Motivated</p>
+            </div>
+            </div>
+
+            <div class="about-item">
+                <h1>02</h1>
+                <div>
+                <h5>I am Highly Experienced</h5>
+                <p><i>Thanks to</i> my professional experience, countless hours of practice, and my many projects; I've gained a deep understanding of how to build good software, what efficient code looks like, and most importantly: what <strong>not</strong> to do.</p>
+                <p class="whatdoesitmean">Nearly 3 years coding ∙ Still eager to learn</p>
+            </div>
+            </div>
+
+            <div class="about-item">
+                <h1>03</h1>
+            <div>
+                <h5>I am a Great Communicator</h5>
+                <p><i>Above all,</i> I value <strong>transparency</strong> and <strong>my word</strong>. My aim is always to build <strong>trust</strong> by delivering on what I say and providing realistic expectations. I am also very thorough in my communication & my goal is always to give you a full and accurate picture.</p>
+                <p class="whatdoesitmean">Trustworthy ∙ Thorough</p>
+            </div>
+            </div>
+	
 		</div>
-		<div class="about-details-div">
-		<p>In a previous life, I worked in the behavior therapy field and pivoted to software development because of two things: my love for <strong>building</strong> and <strong>learning</strong>. I use my knowledge of code and problem solving skills to deliver <strong>business level</strong> websites and applications. My true <i>passion</i> goes beyond any one language and extends to the fundamentals of programming & the process of achieving a deeper level of understanding over time.</p>
-	        <p>...But hey, beyond that, I just love building cool things. Especially things that take a little figuring out. My interests outside of programming include weightlifting, painting, and music.</p>
 		</div>
-		</div></div>
             <div id="about-cards">
                 <div class="card">
                     <div class="behind-card"></div>
                 <div class="inside-card">
                     <i class="fab fa-brands fa-react"></i>
-                    <h3>Web Developer</h3>
+                    <h3>Seasoned Developer</h3>
                     <p>
                         I use my experience in JavaScript and leverage the latest technologies to build business ready web applications.
                     </p>
@@ -1822,7 +1881,7 @@
                <li><i class="fa fa-solid fa-code"></i> JavaScript</li>
                <li><i class="fab fa-brands fa-react"></i> React</li>
                <li><i class="fab fa-brands fa-node"></i> NodeJS</li>
-               <li><i class="fab fa-brands fa-golang"></i> GO</li>
+               <li><i class="fa fa-brands fa-golang"></i> GO</li>
             </ul>
         </div>
         </div>
@@ -1973,7 +2032,7 @@ func main() {
                 </div>
                 <div class="project-content">
                 <img class="laptop-mockup" src="tincarlap-front[1].png" alt="">
-                <img class="phone-mockup" src="tincarphone-portrait[1].png" alt="">
+                <img class="phone-mockup" src="tincarphone-portrait.png" alt="">
                 </div>
                 
                 
@@ -2183,9 +2242,9 @@ func main() {
     window.addEventListener('scroll', () => {
 	    console.log(window.scrollY)
 	    if (window.innerWidth < 440) {
-            if (window.scrollY >= 3300) {
-                pro.style.left = `${(window.scrollY - 3300) / 2}px`
-            } else if (window.scrollY < 3300) {
+            if (window.scrollY >= 4789) {
+                pro.style.left = `${(window.scrollY - 4789) / 2}px`
+            } else if (window.scrollY < 4789) {
                 pro.style.left = 0;
             }
             if (window.scrollY >= 500) {
@@ -2193,9 +2252,9 @@ func main() {
             } else if (window.scrollY < 500) {
             abt.style.left = 0;
             }
-            if (window.scrollY >= 2700) {
-            skillsText.style.left = `-${(window.scrollY - 2700) / 2}px`
-            } else if (window.scrollY < 2700) {
+            if (window.scrollY >= 3889) {
+            skillsText.style.left = `-${(window.scrollY - 3889) / 2}px`
+            } else if (window.scrollY < 3889) {
             skillsText.style.left = 0;
             }
         } 
