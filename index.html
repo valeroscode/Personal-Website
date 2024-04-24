@@ -554,6 +554,55 @@
             animation-fill-mode: forwards;
         }
 
+        #rec-letter {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: left;
+            margin: 2rem 5rem 0 5rem;
+            font-family: "M PLUS 1 Code", monospace;
+        }
+
+        #rec-letter h3 {
+            color: black;
+            font-size: 1.5rem;
+        }
+
+        @keyframes colorChange { 
+  from { border: 5px solid #70C4FF; } 
+}
+
+        #rec-letter a {
+            background-color: rgba(0, 0, 0, 0);
+            padding: 1rem;
+            width: fit-content;
+            text-decoration: underline;
+            color: black;
+            border: 5px solid #0096ff;
+            border-radius: 70%;
+            animation: colorChange 2s infinite alternate;
+        }
+
+        #why-tech {
+            padding: 15rem 0 10rem 0;
+            background-color: #151515;
+            width: 100vw;
+            
+        }
+
+        #why-tech div {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+          
+        }
+
+        #why-tech h2 {
+            color: black;
+            font-family: "M PLUS 1 Code", monospace;
+           }
+
+
         #about-section {
             position: relative;
             top: -4rem;
@@ -1450,6 +1499,13 @@
         }
 
         @media screen and (max-width: 647px) {
+            #rec-letter {
+                margin-left: 3rem;
+                margin-right: 3rem;
+            }
+            #rec-letter a {
+                text-align: center;
+            }
             #internship-text h3 {
                 margin: 0;
                 left: 3rem;
@@ -1797,9 +1853,22 @@
                 "license": "ISC"
             }
         </p>
+
+        
     </section>
 
+    <!-- <section id="why-tech">
+        <div>
+        <h2 id="iliketech">To me, Technology is a great way to help people</h2>
+        
+        </div>
+    </section> -->
+
+    
+
     <section id="about-section">
+
+        
         
         <div class="about-container">
             <h2 id="abt">ABOUT ME</h2>
@@ -1937,7 +2006,11 @@ func main() {
 	</div>
 	<img src="./internship.JPG" id="intern-pic" alt="">
 	</div>
-        </div>
+    <div id="rec-letter">
+    <h3>A few words from my Internship Lead👇</h3>
+    <a href="Alex Valero Recommendation Letter.pdf" target="_blank">Letter of Recommendation from Matthew Urbina</a>
+</div>    
+</div>
 	<hr class="between" />
         <div id="freelance">
             <div>
