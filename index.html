@@ -493,15 +493,6 @@
             padding-left: 0.5rem;
         }
 
-        #skills-text {
-            text-align: right;
-            right: 0;
-            position: relative;
-            margin-bottom: 0;
-            color: black;
-            font-family: "M PLUS 1 Code", monospace;
-        }
-
         .about-container h2 i {
             color: #0096FF;
             position: relative;
@@ -784,15 +775,6 @@
         .card:hover .behind-card {
             transform: rotate(-10deg);
         }
-
-        .skills li {
-            font-family: 'Roboto', sans-serif;
-            background-color: lightgray;
-            padding: 1rem;
-            border-radius: 7px;
-            font-weight: 600;
-        }
-
         #internship {
             background-color: whitesmoke;
             position: relative;
@@ -1468,11 +1450,6 @@
                 width: 34vw;
             }
 
-
-            .skills {
-                margin: 0 5rem;
-            }
-
             #matts-rec {
                 flex-direction: column;
             }
@@ -1667,14 +1644,6 @@
                 width: 90vw;
             }
 
-            .skills {
-                margin: 0 1rem;
-            }
-
-            #skills-text {
-                top: 0rem;
-            }
-
             #scribble {
                 display: none;
             }
@@ -1705,10 +1674,6 @@
                 top: 5rem;
             }
 
-            #skills-sec {
-                position: relative;
-                padding: 12rem 0;
-            }
         }
 
         @media screen and (max-width: 417px) {
@@ -1942,18 +1907,6 @@
             </div>
             
             </div>
-
-            <div id="skills-sec">
-            <h2 id="skills-text">SKILLS</h2>
-            <ul class="skills">
-               <li><i class="fa fa-brands fa-html5"></i> HTML</li>
-               <li><i class="fa fa-brands fa-css3"></i> CSS</li>
-               <li><i class="fa fa-solid fa-code"></i> JavaScript</li>
-               <li><i class="fab fa-brands fa-react"></i> React</li>
-               <li><i class="fab fa-brands fa-node"></i> NodeJS</li>
-               <li><i class="fa fa-brands fa-golang"></i> GO</li>
-            </ul>
-        </div>
         </div>
     </section>
 
@@ -2232,8 +2185,6 @@ func main() {
     const desc = document.getElementById('desc')
     const cards = document.getElementsByClassName('card')
     const abt = document.getElementById('abt')
-    const skillsText = document.getElementById('skills-text')
-    const skills = document.getElementsByClassName('skills')
     const block = document.getElementsByClassName('resume-block')
     const internPic = document.getElementById('intern-pic')
     const pro = document.getElementById('profesh')
@@ -2305,12 +2256,6 @@ func main() {
         }, 600)
     }
 
-    for (let i = 0; i < skills.length; i++) {
-        setTimeout(() => {
-            observerCards.observe(skills[i])
-        }, 600)
-    }
-
     observerCards.observe(document.getElementById('freelance'))
 
     window.addEventListener('scroll', () => {
@@ -2326,11 +2271,6 @@ func main() {
             } else if (window.scrollY < 500) {
             abt.style.left = 0;
             }
-            if (window.scrollY >= 3889) {
-            skillsText.style.left = `-${(window.scrollY - 3889) / 2}px`
-            } else if (window.scrollY < 3889) {
-            skillsText.style.left = 0;
-            }
         } 
 	else if (window.innerWidth < 539 && window.innerWidth > 440) {
             if (window.scrollY >= 3000) {
@@ -2342,11 +2282,6 @@ func main() {
             abt.style.left = `${(window.scrollY - 500) / 2}px`
             } else if (window.scrollY < 500) {
             abt.style.left = 0;
-            }
-            if (window.scrollY >= 2500) {
-            skillsText.style.left = `-${(window.scrollY - 2500) / 2}px`
-            } else if (window.scrollY < 2500) {
-            skillsText.style.left = 0;
             }
         }
         else if (window.innerWidth < 867) {
@@ -2360,22 +2295,12 @@ func main() {
             } else if (window.scrollY < 500) {
             abt.style.left = 0;
             }
-            if (window.scrollY >= 2149) {
-            skillsText.style.left = `-${(window.scrollY - 2149) / 2}px`
-            } else if (window.scrollY < 2149) {
-            skillsText.style.left = 0;
-            }
             } else {
         //Non mobile cases
             if (window.scrollY >= 500) {
             abt.style.left = `${(window.scrollY - 500) / 2}px`
         } else if (window.scrollY < 500) {
             abt.style.left = 0;
-        }
-        if (window.scrollY >= 1300) {
-            skillsText.style.left = `-${(window.scrollY - 1300) / 2}px`
-        } else if (window.scrollY < 1300) {
-            skillsText.style.left = 0;
         }
 
         if (window.scrollY >= 2190) {
