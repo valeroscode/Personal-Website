@@ -1194,6 +1194,15 @@
             font-weight: 800;
         }
 
+        .projects-container h5 {
+            font-size: 1.2rem;
+            font-family: "M PLUS 1 Code", monospace;
+            font-weight: 600;
+            text-align: center;
+            color: black;
+            width: 100%;
+        }
+
         .coming-soon {
             position: relative;
             font-size: 4rem;
@@ -1910,127 +1919,24 @@
         </div>
     </section>
 
-    <section id="internship">
-        <h2 id="profesh">PROFESSIONAL EXPERIENCE</h2>
-        <div id="exp">
-     <div id="internship-text">
-                <img class="internship-pic" src="vous.png" alt="">
-      <h3>Internship</h3>
-      <p class="intern-code">
-        package main
-
-        import "fmt"
-func plus(a int, b int) int {
-	return a + b
-}
-
-func plusPlus(a, b, c int) int {
-	return a + b + c
-}
-
-func main() {
-
-	res := plus(1, 2)
-	fmt.Println("1+2 =", res)
-
-	res = plusPlus(1, 2, 3)
-	fmt.Println("1+2+3 =", res)
-}
-      </p>
-       </div>
-       <h3 class="dev-type">Frontend & Backend</h3>
-	<div id="resume-flexbox">
-	<div class="resume-text">
-       <p class="resume">Using JavaScript, I implemented business logic for an ecommerce segment of the VOUSCon website, thereby automating
-        the tracking of inventory for all merchandise and their respective variants.
-        <a class="resume-block"></a>
-        </p>
-        <p class="resume">Refined existing JavaScript Code and rectified bugs on the VOUS crew sign up website, thereby streamlining
-            the user experience and eliminating redundancies which enabled users to skip three previously existing steps. 
-            <a class="resume-block"></a>
-        </p>
-        <p class="resume">
-            Produced backend code in GO to facilitate the implementation of custom push notifications within an upcoming iOS application.
-            <a class="resume-block"></a>
-            </p>
-        <p class="resume">
-        Delivered cloud functions in GO for backend essentials such as querying data from the Shopify API. 
-        <a class="resume-block"></a>
-        </p>
-	</div>
-	<img src="./internship.JPG" id="intern-pic" alt="">
-	</div>
-    <div id="rec-letter">
-    <h3>Recommendation Letter from my Internship Lead👇</h3>
-    <a href="Alex Valero Recommendation Letter.pdf" target="_blank">Letter of Recommendation from Matthew Urbina</a>
-</div>    
-</div>
-	<hr class="between" />
-        <div id="freelance">
-            <div>
-            <h2>IONNA</h2>
-            <h4>Freelance Client</h4>
-            <p>
-                Developed a single page application comprising four distinct sections with the aim of attracting prospective business partners and to facilitate the recruitment of new talent.
-            </p>
-	    <a id="see-ionna" href="https://www.ionna.com/" target="_blank">See Website</a>
-            
-        </div>
-        <h5 id="scribble">
-            function bubbleSort(arr) {
-                const n = arr.length;
-            
-                for (let i = 0; i < n - 1; i++) {
-                    for (let j = 0; j < n - i - 1; j++) {
-                        // Compare adjacent elements
-                        if (arr[j] > arr[j + 1]) {
-                            // Swap if they are in the wrong order
-                            const temp = arr[j];
-                            arr[j] = arr[j + 1];
-                            arr[j + 1] = temp;
-                        }
-                    }
-                }
-            
-                return arr;
-            }
-        </h5>
-        </div>
-
-        <div id="matts-rec">
-        <p class="qt-1">"</p>
-        <h5 id="rec">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
-        <p class="qt-2">"</p>
-        <div id="rec-img">
-        <img src="./internship.JPG" alt="">
-        <p class="rec-name">- Matthew Urbina</p>
-        <p class="rec-job">VOUS Tech Coordinator</p>
-        </div>
-        </div>
-    </section>
-
     <section id="proj-section">
         <div class="projects-container">
-            <h2>PROJECTS</h2>
+            <h2>Real Platforms for Real Users</h2>
+            <h5>Through software we can address underserved markets, further optimize existing ideas, and solve real problems for real people. </br> These platforms are my way of using technology to do all 3.</h5>
             <br><br>
             <div id="projects-cards">
             <div class="project">
                 <div class="project-title">
                 <h3>Travel Smart</h3>
-                <div class="coming">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#FFD43B" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
-                <p style="color: gray;">Launching for real users soon</p>
-                </div>
                 <a class="lang"><i class="fab fa-brands fa-react"></i> React</a> 
                 <a class="lang"><i class="fa fa-solid fa-code"></i> Javascript</a> 
-                <a class="lang"><i class="fa fa-solid fa-database"></i> Firebase</a> 
-                <a class="lang"><i class="fa fa-brands fa-css3"></i> CSS</a> 
-                <a class="lang"><i class="fa fa-brands fa-html5"></i> HTML</a>
+                <a class="lang"><i class="fa fa-solid fa-code"></i> GO</a>
+                <a class="lang"><i class="fa fa-solid fa-database"></i> PostgreSQL</a> 
 		<a class="lang"><i class="fa fa-solid fa-code"></i> Google APIs</a>
 	
-                <p>A platform that enables users to find the best places in multiple cities here and abroad while planning their trips. As of now this is a big portfolio project but my aim is to release this to real users sometime this year.</p>
+                <p>A platform that enables users to find cool new places and plan trips with ease. Effectivly combining the functionality of several platforms into one, without the complexity of that spilling over to the user. Currently, Travel Smart allows users to explore over 500 unique places across 15 cities within the USA and abroad.</p>
 		
-                <a class="project-btn" href="https://travelsmart2-0.onrender.com/" target="_blank"><i class="fa fa-solid fa-link"></i> Live Demo</a> 
+                <a class="project-btn" href="https://travelsmart2-0.onrender.com/" target="_blank"><i class="fa fa-solid fa-link"></i> Visit Travel Smart</a> 
                 <a class="project-btn" href="https://github.com/valeroscode/TravelSmart2.0" target="_blank"><i class="fab fa-brands fa-github"></i> See Code</a>
 	
             </div>
@@ -2042,45 +1948,14 @@ func main() {
 
             <div class="project">
                 <div class="project-title">
-                <h3>TinCar</h3>
-                
-                
-                <a  class="lang"><i class="fab fa-brands fa-react"></i> React</a> 
-                <a  class="lang"><i class="fab fa-brands fa-node"></i> NodeJS</a> 
-                <a  class="lang"><i class="fa fa-solid fa-database"></i> MongoDB</a> 
-                <a  class="lang"><i class="fa fa-brands fa-css3"></i> CSS</a> 
-                <a  class="lang"><i class="fa fa-brands fa-html5"></i> HTML</a>
-		<a class="lang"><i class="fa fa-solid fa-code"></i> CarQuery API</a>
-		
-                <p>Here to help car enthusiasts find their perfect used car. Explore hundreds of models acorss the most popular makes and use tools and filters not found anywhere else.
-                </p>
-                <a class="project-btn" href="https://tincar-c64x.onrender.com/" target="_blank"><i class="fa fa-solid fa-link"></i> Live Demo</a>
-                <a class="project-btn" href="https://github.com/valeroscode/Tincar.git" target="_blank"><i class="fab fa-brands fa-github"></i> See Code</a>
-                </div>
-                <div class="project-content">
-                <img class="laptop-mockup" src="tincarlap-front[1].png" alt="">
-                <img class="phone-mockup" src="tincarphone-portrait.png" alt="">
-                </div>
-                
-                
-            </div> 
-
-	     <div class="project">
-                <div class="project-title">
-                <h3>Umm... Actually</h3>
-                <div class="coming">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#FFD43B" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
-                <p style="color: gray;">Launching for real users soon</p>
-                </div>
+                <h3>Um, Actually...</h3>
                 
                 <a  class="lang"><i class="fab fa-brands fa-react"></i> React</a> 
-                <a  class="lang"><i class="fab fa-brands fa-node"></i> NodeJS</a> 
+                <a  class="lang"><i class="fa fa-solid fa-code"></i> C#/.NET</a> 
                 <a  class="lang"><i class="fa fa-solid fa-database"></i> MongoDB</a> 
-                <a  class="lang"><i class="fa fa-brands fa-css3"></i> CSS</a> 
-                <a  class="lang"><i class="fa fa-brands fa-html5"></i> HTML</a>
-                <p>An upcoming academic blog spanning the various sub topics of International Relations with a mission to educate on topics not commonly presented in a practical or honest way.
+                <p>Um, Actually... is an informal outlet for thoughts, ideas, and speculations about past and present International developments. With a focus on the political, economic, and social implications of domestic and world events, this blog aims to educate on topics not commonly presented in a practical (or honest) way.
                 </p>
-                <a class="project-btn" href="https://ummactuallyblog.onrender.com/" target="_blank"><i class="fa fa-solid fa-link"></i> Live Demo</a>
+                <a class="project-btn" href="https://ummactuallyblog.onrender.com/" target="_blank"><i class="fa fa-solid fa-link"></i> Visit Um, Actually...</a>
                 <a class="project-btn" href="https://github.com/valeroscode/UmmActually/tree/master" target="_blank"><i class="fab fa-brands fa-github"></i> See Code</a>
                 </div>
                 <div class="project-content">
@@ -2089,7 +1964,33 @@ func main() {
                 </div>
                 
                 
-            </div> 
+            </div>
+
+            <div class="project">
+                <div class="project-title">
+                <h3>TinCar</h3>
+                
+                <div class="coming">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#FFD43B" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
+                <p style="color: gray;">Launching for real users soon</p>
+                </div>
+                <a  class="lang"><i class="fab fa-brands fa-react"></i> React</a> 
+                <a  class="lang"><i class="fab fa-brands fa-node"></i> NodeJS</a> 
+                <a  class="lang"><i class="fa fa-solid fa-database"></i> MongoDB</a> 
+		<a class="lang"><i class="fa fa-solid fa-code"></i> CarQuery API</a>
+		
+                <p>TinCar was created as a different kind of car shopping platform. Not one that people use to buy a car, but rather, a platform that people use to FIND the perfect car for them so that when it comes time to shop less time is spent looking. It's unqiueness lies in the information users get and the search tools avaliable. The target demographic for TinCar is people who know a little more about cars than the average consumer.  
+                </p>
+                <a class="project-btn" href="https://tincar-c64x.onrender.com/" target="_blank"><i class="fa fa-solid fa-link"></i> See the work in progress...</a>
+                <a class="project-btn" href="https://github.com/valeroscode/Tincar.git" target="_blank"><i class="fab fa-brands fa-github"></i> See Code</a>
+                </div>
+                <div class="project-content">
+                <img class="laptop-mockup" src="tincarlap-front[1].png" alt="">
+                <img class="phone-mockup" src="tincarphone-portrait.png" alt="">
+                </div>
+                
+                
+            </div>  
         </div>
        
         </div>
@@ -2186,9 +2087,6 @@ func main() {
     const cards = document.getElementsByClassName('card')
     const abt = document.getElementById('abt')
     const block = document.getElementsByClassName('resume-block')
-    const internPic = document.getElementById('intern-pic')
-    const pro = document.getElementById('profesh')
-    const int_text = document.getElementById('internship-text')
     const rec = document.getElementById('rec')
     const recImg = document.getElementById('rec-img')
     const project = document.getElementsByClassName('project')
@@ -2240,12 +2138,6 @@ func main() {
         observerProj.observe(project[i])
     }
 
-    observerText.observe(int_text)
-    observerSlide.observe(rec)
-    if (window.innerWidth > 866) {
-    observerSlideRt.observe(recImg)
-    }
-
     for (let i = 0; i < block.length; i++) {
         observerBlock.observe(block[i])
     }
@@ -2256,61 +2148,13 @@ func main() {
         }, 600)
     }
 
-    observerCards.observe(document.getElementById('freelance'))
-
     window.addEventListener('scroll', () => {
-	    console.log(window.scrollY)
-	    if (window.innerWidth < 440) {
-            if (window.scrollY >= 4789) {
-                pro.style.left = `${(window.scrollY - 4789) / 2}px`
-            } else if (window.scrollY < 4789) {
-                pro.style.left = 0;
-            }
-            if (window.scrollY >= 500) {
+        console.log(window.scrollY)
+            if (window.scrollY >= 100) {
             abt.style.left = `${(window.scrollY - 500) / 2}px`
             } else if (window.scrollY < 500) {
             abt.style.left = 0;
-            }
-        } 
-	else if (window.innerWidth < 539 && window.innerWidth > 440) {
-            if (window.scrollY >= 3000) {
-                pro.style.left = `${(window.scrollY - 3000) / 2}px`
-            } else {
-                pro.style.left = '0px';
-            }
-            if (window.scrollY >= 500) {
-            abt.style.left = `${(window.scrollY - 500) / 2}px`
-            } else if (window.scrollY < 500) {
-            abt.style.left = 0;
-            }
-        }
-        else if (window.innerWidth < 867) {
-            if (window.scrollY >= 2600) {
-                pro.style.left = `${(window.scrollY - 2600) / 2}px`
-            } else {
-                pro.style.left = '0px';
-            }
-            if (window.scrollY >= 500) {
-            abt.style.left = `${(window.scrollY - 500) / 2}px`
-            } else if (window.scrollY < 500) {
-            abt.style.left = 0;
-            }
-            } else {
-        //Non mobile cases
-            if (window.scrollY >= 500) {
-            abt.style.left = `${(window.scrollY - 500) / 2}px`
-        } else if (window.scrollY < 500) {
-            abt.style.left = 0;
-        }
-
-        if (window.scrollY >= 2190) {
-            pro.style.left = `${(window.scrollY - 2190) / 2}px`
-        } else {
-            pro.style.left = '0px';
-        }
-        }
-
-        
+            }   
     })
 
     </script>
