@@ -1182,6 +1182,13 @@
             animation: slideInProj 1s ease-in-out;
         }
 
+        .projects-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         .projects-container h2 {
             position: relative;
             text-align: center;
@@ -1473,6 +1480,9 @@
         }
 
         @media screen and (max-width: 1069px) {
+            .projects-container h5 {
+                width: 95%;
+            }
             .project {
                 flex-direction: column;
                 align-items: flex-start;
